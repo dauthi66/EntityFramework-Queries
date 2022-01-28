@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace EntityFramework_Queries
 {
+    //tell debugger display to focus on these specific values
+    [DebuggerDisplay("{VendorName} {VendorState}")]
     public partial class Vendor
     {
         public Vendor()
