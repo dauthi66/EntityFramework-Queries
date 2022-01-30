@@ -59,6 +59,31 @@ namespace EntityFramework_Queries
             //message box does not know how to display a string builder object
             MessageBox.Show(displayString.ToString());
         }
+
+        private void btnMiscQueries_Click(object sender, EventArgs e)
+        {
+            APContext dbContext = new();
+
+            //get number of invoices
+            int invoiceCount = (from invoice in dbContext.Invoices
+                                select invoice).Count();
+
+            //check if something exists
+            bool doesExist = (from v in dbContext.Vendors
+                             where v.VendorState == "WA"
+                             select v).Any(); //checks for ANY matches
+
+            //Query a single vendor
+            Vendor ? ibm = (from v in dbContext.Vendors
+                            where v.VendorName == "IBM"
+                            // grabs a single object if query narrows search to one, if does not exist, defaults to null
+                            select v).SingleOrDefault();
+            
+            if (ibm != null)
+            {
+                //utilize object
+            }
+        }
     }
 
     //class created for Vendor query of multiple tables

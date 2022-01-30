@@ -31,6 +31,8 @@
             this.btnSelectAllVendors = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnSelectVendNameCityState = new System.Windows.Forms.Button();
+            this.btnMiscQueries = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSelectAllVendors
@@ -45,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(75, 100);
+            this.button2.Location = new System.Drawing.Point(75, 107);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 29);
             this.button2.TabIndex = 1;
@@ -55,7 +57,7 @@
             // 
             // btnSelectVendNameCityState
             // 
-            this.btnSelectVendNameCityState.Location = new System.Drawing.Point(75, 148);
+            this.btnSelectVendNameCityState.Location = new System.Drawing.Point(42, 162);
             this.btnSelectVendNameCityState.Name = "btnSelectVendNameCityState";
             this.btnSelectVendNameCityState.Size = new System.Drawing.Size(241, 29);
             this.btnSelectVendNameCityState.TabIndex = 2;
@@ -63,11 +65,32 @@
             this.btnSelectVendNameCityState.UseVisualStyleBackColor = true;
             this.btnSelectVendNameCityState.Click += new System.EventHandler(this.btnSelectVendNameCityState_Click);
             // 
+            // btnMiscQueries
+            // 
+            this.btnMiscQueries.Location = new System.Drawing.Point(75, 217);
+            this.btnMiscQueries.Name = "btnMiscQueries";
+            this.btnMiscQueries.Size = new System.Drawing.Size(175, 29);
+            this.btnMiscQueries.TabIndex = 3;
+            this.btnMiscQueries.Text = "Misc Queries";
+            this.btnMiscQueries.UseVisualStyleBackColor = true;
+            this.btnMiscQueries.Click += new System.EventHandler(this.btnMiscQueries_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(75, 272);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(175, 29);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Select * FROM Vendors";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // btnSelectVendorCA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnMiscQueries);
             this.Controls.Add(this.btnSelectVendNameCityState);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSelectAllVendors);
@@ -82,5 +105,7 @@
         private Button btnSelectAllVendors;
         private Button button2;
         private Button btnSelectVendNameCityState;
+        private Button btnMiscQueries;
+        private Button button3;
     }
 }
