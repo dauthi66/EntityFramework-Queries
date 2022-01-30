@@ -30,7 +30,7 @@
         {
             this.btnSelectAllVendors = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSelectVendNameCityState = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSelectAllVendors
@@ -53,21 +53,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnSelectVendNameCityState
             // 
-            this.button3.Location = new System.Drawing.Point(75, 148);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSelectVendNameCityState.Location = new System.Drawing.Point(75, 148);
+            this.btnSelectVendNameCityState.Name = "btnSelectVendNameCityState";
+            this.btnSelectVendNameCityState.Size = new System.Drawing.Size(241, 29);
+            this.btnSelectVendNameCityState.TabIndex = 2;
+            this.btnSelectVendNameCityState.Text = "Select Vendor Name, City, State ";
+            this.btnSelectVendNameCityState.UseVisualStyleBackColor = true;
+            this.btnSelectVendNameCityState.Click += new System.EventHandler(this.btnSelectVendNameCityState_Click);
             // 
             // btnSelectVendorCA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSelectVendNameCityState);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSelectAllVendors);
             this.Name = "btnSelectVendorCA";
@@ -80,6 +81,6 @@
 
         private Button btnSelectAllVendors;
         private Button button2;
-        private Button button3;
+        private Button btnSelectVendNameCityState;
     }
 }

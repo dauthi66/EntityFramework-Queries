@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace EntityFramework_Queries
 {
     public partial class btnSelectVendorCA : Form
@@ -29,10 +31,41 @@ namespace EntityFramework_Queries
                                         .OrderBy(v => v.VendorName)
                                         .ToList();
             
-            List<Vendor> vendorList2 = ( from v in dbContext.Vendors
+            List<Vendor> vendorList2 =  (from v in dbContext.Vendors
                                          where v.VendorState == "CA"
                                          orderby v.VendorName
                                          select v).ToList();
-        }                               
+        }
+
+        private void btnSelectVendNameCityState_Click(object sender, EventArgs e)
+        {
+            using APContext dbContext = new();
+            //var creates an anonymous type
+            List<VendorLocation> results = (from v in dbContext.Vendors
+                          select new VendorLocation
+                          {
+                              VendorName = v.VendorName, 
+                              VendorState = v.VendorState, 
+                              VendorCity = v.VendorCity
+                          }).ToList();
+
+            //rather than concatonating a new string over and over,
+            //a string builder can concatonate it all at once with a string builder object
+            StringBuilder displayString = new();
+            foreach (VendorLocation vendor in results)
+            {
+                displayString.AppendLine($"{vendor.VendorName} is in {vendor.VendorCity}");
+            }
+            //message box does not know how to display a string builder object
+            MessageBox.Show(displayString.ToString());
+        }
+    }
+
+    //class created for Vendor query of multiple tables
+    class VendorLocation
+    {
+        public string VendorName { get; set; }
+        public string VendorState { get; set; }
+        public string VendorCity { get; set; }
     }
 }
