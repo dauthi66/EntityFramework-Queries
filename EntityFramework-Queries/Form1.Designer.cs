@@ -32,7 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnSelectVendNameCityState = new System.Windows.Forms.Button();
             this.btnMiscQueries = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnVendorsAndInvoices = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSelectAllVendors
@@ -57,7 +57,7 @@
             // 
             // btnSelectVendNameCityState
             // 
-            this.btnSelectVendNameCityState.Location = new System.Drawing.Point(42, 162);
+            this.btnSelectVendNameCityState.Location = new System.Drawing.Point(75, 165);
             this.btnSelectVendNameCityState.Name = "btnSelectVendNameCityState";
             this.btnSelectVendNameCityState.Size = new System.Drawing.Size(241, 29);
             this.btnSelectVendNameCityState.TabIndex = 2;
@@ -75,21 +75,22 @@
             this.btnMiscQueries.UseVisualStyleBackColor = true;
             this.btnMiscQueries.Click += new System.EventHandler(this.btnMiscQueries_Click);
             // 
-            // button3
+            // btnVendorsAndInvoices
             // 
-            this.button3.Location = new System.Drawing.Point(75, 272);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 29);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Select * FROM Vendors";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnVendorsAndInvoices.Location = new System.Drawing.Point(75, 272);
+            this.btnVendorsAndInvoices.Name = "btnVendorsAndInvoices";
+            this.btnVendorsAndInvoices.Size = new System.Drawing.Size(201, 29);
+            this.btnVendorsAndInvoices.TabIndex = 4;
+            this.btnVendorsAndInvoices.Text = "Select * vendors w/invoices";
+            this.btnVendorsAndInvoices.UseVisualStyleBackColor = true;
+            this.btnVendorsAndInvoices.Click += new System.EventHandler(this.btnVendorsAndInvoices_Click);
             // 
             // btnSelectVendorCA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnVendorsAndInvoices);
             this.Controls.Add(this.btnMiscQueries);
             this.Controls.Add(this.btnSelectVendNameCityState);
             this.Controls.Add(this.button2);
@@ -106,6 +107,6 @@
         private Button button2;
         private Button btnSelectVendNameCityState;
         private Button btnMiscQueries;
-        private Button button3;
+        private Button btnVendorsAndInvoices;
     }
 }
